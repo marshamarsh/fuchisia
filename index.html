@@ -12,8 +12,7 @@
   body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjYOhKG4T1xrnE2P9Slsqit2zgA2SJ96NUtLLqpTa0nW4LhVAU-iE_H-RI9EJDqqOOTjza611SbDIbKrKMpqtzodticdYBcDRVu8LBHgLCIntMVadlD-hM2v8ior5WgzUtrpqXLsfPp0-Cb5CVx82RcSPfF425FsJtf2YcNFnRiF2_rlmazK_9q-Fi7BcU/s736/P10%20(1).jpg")
-      no-repeat center center fixed;
+    background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjYOhKG4T1xrnE2P9Slsqit2zgA2SJ96NUtLLqpTa0nW4LhVAU-iE_H-RI9EJDqqOOTjza611SbDIbKrKMpqtzodticdYBcDRVu8LBHgLCIntMVadlD-hM2v8ior5WgzUtrpqXLsfPp0-Cb5CVx82RcSPfF425FsJtf2YcNFnRiF2_rlmazK_9q-Fi7BcU/s736/P10%20(1).jpg") no-repeat center center fixed;
     background-size: cover;
     min-height: 100vh;
     animation: bgMove 22s linear infinite alternate;
@@ -394,6 +393,7 @@
     white-space:nowrap;
   }
 
+  /* RESPONSIVE */
   @media (max-width: 970px) {
     .container {margin:25px 5vw;}
     .right {gap:0.8rem;}
@@ -408,11 +408,46 @@
     .photos-grid {flex-direction: column; gap:16px;}
     .photos-grid .photo-item {aspect-ratio: 1/1;}
   }
+  @media (max-width: 600px) {
+    .container {
+      margin: 18px 0vw;
+      padding: 12px 4vw;
+      border-radius: 15px;
+    }
+    .left, .right {
+      min-width: unset;
+      padding: 8px;
+      border-radius: 14px;
+    }
+    .card {
+      padding: 11px 9px;
+      font-size: 0.97rem;
+      border-radius: 13px;
+    }
+    .card-title {
+      font-size: 1rem;
+      padding: 6px 9px;
+      border-radius: 7px;
+      margin-bottom: 7px;
+    }
+    .profile-pic {
+      max-width: 120px;
+      border-radius: 13px;
+    }
+    .name { font-size: 1.13rem; margin-top: 8px;}
+    .photos-section {gap: 11px;}
+    .photos-grid {gap:8px;}
+    .photo-item {border-radius:11px;}
+    .photo-item img {border-radius: 9px;}
+    .music-section {border-radius:14px; padding: 10px 7px;}
+    .music-player {max-width:100%; gap:7px; padding:7px 8px; border-radius:10px;}
+    .music-cover {width:34px; height:34px; border-radius:6px;}
+    .music-info {font-size:0.96rem;}
+  }
 </style>
 </head>
 <body>
 
-  <!-- Tambahkan di dalam <body> (setelah <body> dan sebelum <div class="container">) -->
 <audio id="bg-music" src="kiiikiii.m4a" autoplay loop></audio>
 <script>
   window.addEventListener('DOMContentLoaded', function(){
