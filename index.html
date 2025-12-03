@@ -259,6 +259,7 @@
     transition: scale 0.23s;
     border-radius: 17px;
     box-shadow: 0 2px 11px #FFA2B928;
+    display: block;
   }
   .photos-grid .photo-item:hover {
     box-shadow: 0 10px 28px #FFA2B980;
@@ -406,7 +407,21 @@
     .profile-pic {max-width:180px;}
     .photos-section, .music-section {margin-top:20px;}
     .photos-grid {flex-direction: column; gap:16px;}
-    .photos-grid .photo-item {aspect-ratio: 1/1;}
+    .photos-grid .photo-item {
+      aspect-ratio: unset; /* Fix utama */
+      height: 200px;
+      min-height: 120px;
+      max-width: 100%;
+      width: 100%;
+      border-radius: 15px;
+    }
+    .photos-grid .photo-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 15px;
+      display: block;
+    }
   }
   @media (max-width: 600px) {
     .container {
@@ -437,6 +452,7 @@
     .name { font-size: 1.13rem; margin-top: 8px;}
     .photos-section {gap: 11px;}
     .photos-grid {gap:8px;}
+    .photos-grid .photo-item {height: 120px;}
     .photo-item {border-radius:11px;}
     .photo-item img {border-radius: 9px;}
     .music-section {border-radius:14px; padding: 10px 7px;}
@@ -471,7 +487,6 @@
 
     <div class="card" style="margin-top:6px; --delay: 0;">"Some days all I need is a little pink magic: a soft playlist, 
       a cute outfit, and the reminder that I’m allowed to grow gently, slowly, beautifully."</div>
-
   </div>
 
   <div class="right">
@@ -487,7 +502,7 @@
       </div>
     </div>
 
-    <!-- 3 Photo Layout + Music Section -->
+    <!-- 3 Photo Layout -->
     <div class="photos-section">
       <div class="photos-grid">
         <div class="photo-item">
@@ -500,7 +515,6 @@
           <img src="shoes.jpg" alt="Photo 3">
         </div>
       </div>
-    </div>
     </div>
   </div>
 </div>
